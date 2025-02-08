@@ -13,45 +13,55 @@
 
 .body-image {
     width: 400px;
+    /* Adjust width */
     height: auto;
+    /* Maintain aspect ratio */
     display: block;
     margin: 0 auto;
+    /* Center the image */
 }
 
-/* Text for Hovered Body Part */
+/* Blurb for Hovered Body Part */
 .hover-blurb {
     position: absolute;
     transform: translate(-50%, -120%);
+    /* Position above hovered area */
     background-color: rgba(0, 128, 0, 0.8);
+    /* Green background */
     color: white;
     padding: 5px 10px;
     border-radius: 10px;
+    /* Rounded bubble appearance */
     font-size: 14px;
     z-index: 10;
     pointer-events: none;
+    /* Prevent interaction */
 }
 
 /* Clickable Areas */
 .clickable {
     position: absolute;
     background: transparent;
+    /* Transparent by default */
     cursor: pointer;
     transition: background 0.2s ease;
 }
 
 .clickable:hover {
     background: rgba(255, 0, 0, 0.3);
+    /* Red overlay when hovered */
 }
 
-/* Adjust positions and sizes */
+/* Head */
 .head {
-    top: 4%;
-    left: 43%;
+    top: 5%;
+    left: 44%;
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
+/* Chest */
 .chest {
     top: 20%;
     left: 42%;
@@ -59,30 +69,70 @@
     height: 50px;
 }
 
+/* Stomach */
 .stomach {
-    top: 34%;
-    left: 40%;
-    width: 80px;
-    height: 70px;
+    top: 35%;
+    left: 41%;
+    width: 70px;
+    height: 60px;
 }
 
+/* Left Arm */
 .left-arm {
-    top: 20%;
+    top: 22%;
     left: 25%;
-    width: 40px;
-    height: 100px;
+    width: 30px;
+    height: 120px;
 }
 
+/* Right Arm */
 .right-arm {
-    top: 20%;
-    left: 65%;
-    width: 40px;
-    height: 100px;
+    top: 22%;
+    left: 66%;
+    width: 30px;
+    height: 120px;
 }
 
-.legs {
-    top: 55%;
-    left: 42%;
+/* Left Hand */
+.left-hand {
+    top: 45%;
+    /* Adjusted vertical position */
+    left: 20%;
+    /* Adjusted horizontal position */
     width: 60px;
+    /* Increased width */
+    height: 60px;
+    /* Increased height */
+    border-radius: 50%;
+    /* Circular area */
+}
+
+/* Right Hand */
+.right-hand {
+    top: 45%;
+    /* Adjusted vertical position */
+    left: 70%;
+    /* Adjusted horizontal position */
+    width: 60px;
+    /* Increased width */
+    height: 60px;
+    /* Increased height */
+    border-radius: 50%;
+    /* Circular area */
+}
+
+/* Left Leg */
+.left-leg {
+    top: 55%;
+    left: 40%;
+    width: 30px;
+    height: 140px;
+}
+
+/* Right Leg */
+.right-leg {
+    top: 55%;
+    left: 50%;
+    width: 30px;
     height: 140px;
 }

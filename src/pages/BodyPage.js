@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/BodyPage.css"; 
+import "../styles/BodyPage.css";
 
 const BodyPage = () => {
     const [hoveredPart, setHoveredPart] = useState(null); // State to track hovered part
@@ -26,7 +26,7 @@ const BodyPage = () => {
         <div className="body-page">
             <h1>Select a Body Part</h1>
 
-            {/*Text for highlighted part*/}
+            {/* Text for highlighted part */}
             {hoveredPart && (
                 <div
                     className="hover-blurb"
@@ -76,9 +76,27 @@ const BodyPage = () => {
                     onMouseLeave={handleMouseLeave}
                 ></div>
                 <div
-                    className="clickable legs"
-                    onClick={() => handleBodyPartClick("Legs")}
-                    onMouseEnter={(e) => handleMouseEnter("Legs", e)}
+                    className="clickable left-hand"
+                    onClick={() => handleBodyPartClick("Left Hand")}
+                    onMouseEnter={(e) => handleMouseEnter("Left Hand", e)}
+                    onMouseLeave={handleMouseLeave}
+                ></div>
+                <div
+                    className="clickable right-hand"
+                    onClick={() => handleBodyPartClick("Right Hand")}
+                    onMouseEnter={(e) => handleMouseEnter("Right Hand", e)}
+                    onMouseLeave={handleMouseLeave}
+                ></div>
+                <div
+                    className="clickable left-leg"
+                    onClick={() => handleBodyPartClick("Left Leg")}
+                    onMouseEnter={(e) => handleMouseEnter("Left Leg", e)}
+                    onMouseLeave={handleMouseLeave}
+                ></div>
+                <div
+                    className="clickable right-leg"
+                    onClick={() => handleBodyPartClick("Right Leg")}
+                    onMouseEnter={(e) => handleMouseEnter("Right Leg", e)}
                     onMouseLeave={handleMouseLeave}
                 ></div>
             </div>
