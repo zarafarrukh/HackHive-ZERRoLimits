@@ -1,7 +1,7 @@
 /* Styles for homepage */
 .homepage {
     text-align: center;
-    background-color: #e2fde4; /* Sage green */
+    background-color: #cde6ce; /* Sage green */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,9 +16,6 @@
     margin-bottom: 20px;
   }
   
-  .logo {
-    width: 120px; /* logo size */
-  }
   
   .slogan {
     font-style: italic;
