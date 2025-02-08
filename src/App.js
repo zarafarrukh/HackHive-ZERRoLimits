@@ -1,14 +1,18 @@
-import React from "react"; // Import React library
-import HomePage from "./pages/HomePage"; // Import the HomePage component
-import "./styles/App.css"; // Import global CSS styles
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BodyPage from "./pages/BodyPage"; // Ensure correct path to BodyPage
+import HomePage from "./pages/HomePage";
 
-// Define the main App component
 function App() {
   return (
-    // Main container for the app
-    <div className="App">
-      <HomePage />
-    </div>
+    <Router>
+      <Routes>
+        {/* Home page route */}
+        <Route path="/" element={<HomePage />} />
+        
+        <Route path="*" element={<BodyPage />} />
+      </Routes>
+    </Router>
   );
 }
 

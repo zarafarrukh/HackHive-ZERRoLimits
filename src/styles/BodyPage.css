@@ -1,0 +1,88 @@
+.body-page {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.body-image-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.body-image {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Text for Hovered Body Part */
+.hover-blurb {
+    position: absolute;
+    transform: translate(-50%, -120%);
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Clickable Areas */
+.clickable {
+    position: absolute;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.clickable:hover {
+    background: rgba(255, 0, 0, 0.3);
+}
+
+/* Adjust positions and sizes */
+.head {
+    top: 4%;
+    left: 43%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.chest {
+    top: 20%;
+    left: 42%;
+    width: 60px;
+    height: 50px;
+}
+
+.stomach {
+    top: 34%;
+    left: 40%;
+    width: 80px;
+    height: 70px;
+}
+
+.left-arm {
+    top: 20%;
+    left: 25%;
+    width: 40px;
+    height: 100px;
+}
+
+.right-arm {
+    top: 20%;
+    left: 65%;
+    width: 40px;
+    height: 100px;
+}
+
+.legs {
+    top: 55%;
+    left: 42%;
+    width: 60px;
+    height: 140px;
+}

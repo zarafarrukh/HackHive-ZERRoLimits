@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/HomePage.css"; // Import stylesheet
 import Footer from "../pages/Footer"; // Import the Footer component
 
 const HomePage = () => {
+  const navigate = useNavigate(); // Hook for navigation
+
+  const handleButtonClick = () => {
+    navigate("/body"); // Navigate to BodyPage
+  };
+
   return (
     <div className="homepage">
       {/* Logo and Slogan */}
@@ -16,10 +23,12 @@ const HomePage = () => {
       <section className="main-content">
         <h2>Welcome to Revivo</h2>
         <p>Find the root cause of your health concerns and get personalized insights.</p>
-        <button className="cta-button">Start Your Journey</button>
+        <button className="cta-button" onClick={handleButtonClick}>
+          Start Your Journey
+        </button>
       </section>
 
-      {/* Footer Section (Imported from Footer.js) */}
+      {/* Footer Section */}
       <Footer />
     </div>
   );
