@@ -10,6 +10,10 @@ const ChestPage = () => {
         navigate(-1); // Go back to the previous page
     };
 
+    const handleSkinClick = () => {
+        navigate("/skin-questions");
+    };
+
     return (
         <div className="chest-container">
             {/* Chest Image */}
@@ -17,7 +21,7 @@ const ChestPage = () => {
 
             {/* Centered Skin Button */}
             <div className="chest-buttons">
-                <button className="chest-option-button">Skin</button>
+                <button className="chest-option-button" onClick={handleSkinClick}>Skin</button>
             </div>
 
             {/* Back Button with Text */}

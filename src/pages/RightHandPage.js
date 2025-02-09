@@ -10,6 +10,10 @@ const RightHandPage = () => {
         navigate(-1); // Go back to the previous page
     };
 
+    const handleSkinClick = () => {
+        navigate("/skin-questions");
+    };
+
     return (
         <div className="right-hand-container">
             {/* Right Hand Image */}
@@ -17,7 +21,7 @@ const RightHandPage = () => {
 
             {/* Centered Skin Button */}
             <div className="right-hand-buttons">
-                <button className="right-hand-option-button">Skin</button>
+                <button className="right-hand-option-button" onClick={handleSkinClick}>Skin</button>
             </div>
 
             {/* Back Button with Text */}
