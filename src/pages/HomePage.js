@@ -8,7 +8,7 @@ import Accessibility from "../pages/Accessibility";
 const HomePage = () => {
   return (
     <div className="homepage">
-      {/* Clean and Minimal Navbar */}
+      {/* Navbar */}
       <nav className="navbar">
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/about" className="nav-link">About</Link>
@@ -27,7 +27,7 @@ const HomePage = () => {
       </section>
 
        {/* Accessibility Feature */}
-       <Accessibility />
+      <Accessibility />
 
       {/* Footer */}
       <Footer />
