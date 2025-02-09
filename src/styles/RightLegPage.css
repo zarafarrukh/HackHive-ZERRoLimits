@@ -1,4 +1,4 @@
-.face-container {
+.right-leg-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,33 +11,32 @@
     position: relative;
 }
 
-/* Make the image higher on the page */
-.face-image {
-    width: 300px;
+/* Right Leg Image (Much Smaller, 80px wide) */
+.right-leg-image {
+    width: 80px;
+    /* Make it much smaller */
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     margin-bottom: 20px;
-    /* Space between image and buttons */
+    /* Space between image and button */
 }
 
-.face-image:hover {
+.right-leg-image:hover {
     transform: scale(1.1);
 }
 
 /* Centered Button Container */
-.face-buttons {
+.right-leg-buttons {
     display: flex;
-    gap: 20px;
-    /* Spacing between buttons */
     margin-top: 10px;
 }
 
-/* Skin & Hair Buttons */
-.face-option-button {
-    padding: 10px 20px;
-    font-size: 16px;
+/* Skin Button */
+.right-leg-option-button {
+    padding: 8px 16px;
+    font-size: 14px;
     color: white;
     background-color: #007bff;
     border: none;
@@ -46,21 +45,23 @@
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.face-option-button:hover {
+.right-leg-option-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
-/* Back Button: Smaller & Higher */
+/* Back Button: Smaller, Higher, and With Text */
 .back-button {
     position: absolute;
     bottom: 100px;
     /* Moves it slightly higher */
     left: 20px;
-    padding: 8px 14px;
+    padding: 6px 12px;
+    /* Reduce button size */
     background-color: #007bff;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
+    /* Make text smaller */
     border: none;
     border-radius: 5px;
     cursor: pointer;

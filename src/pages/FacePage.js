@@ -15,6 +15,12 @@ const FacePage = () => {
             {/* Face Image Only */}
             <img src="/head.png" alt="Head" className="face-image" />
 
+            {/* Two Buttons in Center */}
+            <div className="face-buttons">
+                <button className="face-option-button">Skin</button>
+                <button className="face-option-button">Hair</button>
+            </div>
+
             {/* Back Button with Text */}
             <button className="back-button" onClick={handleBackClick}>
                 Back

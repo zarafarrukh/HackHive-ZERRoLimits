@@ -1,4 +1,4 @@
-.face-container {
+.chest-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,31 +11,29 @@
     position: relative;
 }
 
-/* Make the image higher on the page */
-.face-image {
+/* Chest Image */
+.chest-image {
     width: 300px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     margin-bottom: 20px;
-    /* Space between image and buttons */
+    /* Space between image and button */
 }
 
-.face-image:hover {
+.chest-image:hover {
     transform: scale(1.1);
 }
 
 /* Centered Button Container */
-.face-buttons {
+.chest-buttons {
     display: flex;
-    gap: 20px;
-    /* Spacing between buttons */
     margin-top: 10px;
 }
 
-/* Skin & Hair Buttons */
-.face-option-button {
+/* Skin Button */
+.chest-option-button {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
@@ -46,12 +44,12 @@
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.face-option-button:hover {
+.chest-option-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
-/* Back Button: Smaller & Higher */
+/* Back Button: Smaller, Higher, and With Text */
 .back-button {
     position: absolute;
     bottom: 100px;
