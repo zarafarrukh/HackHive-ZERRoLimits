@@ -1,7 +1,7 @@
 # REVIVO
 # <img src="https://github.com/zarafarrukh/Revivo/blob/main/src/assets/images/logo.png" alt="REVIVO" width="120"/>
 
-echo -e "\e[32mRevive your best self\e[0m"
+Revive your best self
 
 ## Contributors
 Zara Farrukh - Rabia Chattha - Ethan Janovitz - Rithika Rushendra
