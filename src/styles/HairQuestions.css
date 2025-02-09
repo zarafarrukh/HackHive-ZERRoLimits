@@ -1,23 +1,33 @@
 /* HairQuestions.css */
-
-/* Style for the Back to Body button */
 .back-to-body-btn {
-  position: absolute; /* Absolute positioning */
-  bottom: 16px; /* Adjust for bottom-left corner */
-  left: 16px; /* Adjust for bottom-left corner */
-  background-color: #4a5568; /* Dark gray background */
-  color: white; /* White text color */
-  border: none; /* Remove border */
-  padding: 10px 20px; /* Padding for button */
-  border-radius: 8px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 14px; /* Font size for text */
-  z-index: 1000; /* Ensure it appears above other elements */
+  position: absolute;
+  /* Absolute positioning */
+  bottom: 16px;
+  /* Adjust for bottom-left corner */
+  left: 16px;
+  /* Adjust for bottom-left corner */
+  background-color: #4a5568;
+  /* Dark gray background */
+  color: white;
+  /* White text color */
+  border: none;
+  /* Remove border */
+  padding: 10px 20px;
+  /* Padding for button */
+  border-radius: 8px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  font-size: 14px;
+  /* Font size for text */
+  z-index: 1000;
+  /* Ensure it appears above other elements */
 }
 
 /* Hover effect for the button */
 .back-to-body-btn:hover {
-  background-color: #2d3748; /* Darker shade on hover */
+  background-color: #2d3748;
+  /* Darker shade on hover */
 }
 
 
