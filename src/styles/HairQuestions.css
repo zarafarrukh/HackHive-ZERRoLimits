@@ -115,7 +115,7 @@ button:active {
   overflow-wrap: break-word; /* Ensures long words break properly */
   white-space: pre-wrap; /* Maintains the formatting while wrapping text */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better focus */
-  border: 2px solid #ccc; /* Optional: Border to match your theme */
+  border: 2px solid #ccc; /* Border to match theme */
 }
 
 pre {
