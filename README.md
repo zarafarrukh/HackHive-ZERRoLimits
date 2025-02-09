@@ -1,3 +1,6 @@
+# REVIVO
+![REVIVO](src/assets/images)
+
 ## Contributors
 Zara Farrukh - Rabia Chattha - Ethan Janovitz - Rithika Rushendra
 
