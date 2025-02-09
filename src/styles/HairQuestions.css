@@ -1,0 +1,102 @@
+/* HairQuestions.css */
+
+/* Set a clean font for the whole page */
+body {
+  font-family: "Arial", sans-serif; /* Change this to any font you like */
+  background-color: #76e3a0;
+  color: #000000;
+}
+
+/* Main container */
+.p-6 {
+  max-width: 600px;
+  margin: auto;
+  background: rgb(116, 227, 224);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(173, 9, 9, 0.1);
+}
+
+/* Headings */
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 10%;
+  border: 3px solid #1eddd6;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  color: black;
+}
+
+/* When the button is selected, keep the color */
+button.selected {
+  background-color: #ff8800 !important; /* Stays after clicking */
+  color: white !important;
+  border-color: #cc7000 !important;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #007BFF;
+  color: white;
+  border-color: #0056b3;
+}
+
+/* Button click (active state) */
+button:active {
+  background-color: #0056b3;
+}
+
+/* Center align buttons in groups */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Margin for sections */
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+/* Response box */
+.mt-4 {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f0f0f0; /* Light gray background */
+  font-size: 16px;
+  max-width: 100%; /* Prevents it from going beyond its container */
+  word-wrap: break-word; /* Wraps long lines */
+  overflow-wrap: break-word; /* Ensures long words break properly */
+  white-space: pre-wrap; /* Maintains the formatting while wrapping text */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better focus */
+  border: 2px solid #ccc; /* Optional: Border to match your theme */
+}
+
+pre {
+  line-height: 1.8; /* Adjust this value for more or less spacing */
+}
+
+/* Make text inside response bold */
+.font-bold {
+  font-weight: bold;
+}
