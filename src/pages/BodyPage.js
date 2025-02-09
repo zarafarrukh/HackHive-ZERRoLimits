@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/BodyPage.css";
 
 const BodyPage = () => {
-    const [hoveredPart, setHoveredPart] = useState(null); // State to track hovered part
-    const [blurbPosition, setBlurbPosition] = useState({ top: 0, left: 0 }); // State for text position
+    const [hoveredPart, setHoveredPart] = useState(null);
+    const [blurbPosition, setBlurbPosition] = useState({ top: 0, left: 0 });
+    const navigate = useNavigate();
 
     const handleMouseEnter = (part, event) => {
         const rect = event.target.getBoundingClientRect();
-        setHoveredPart(part); // Set the part being hovered
+        setHoveredPart(part);
         setBlurbPosition({
             top: rect.top + window.scrollY - 20,
             left: rect.left + window.scrollX + rect.width / 2,
@@ -15,18 +17,29 @@ const BodyPage = () => {
     };
 
     const handleMouseLeave = () => {
-        setHoveredPart(null); // Reset when not hovering
+        setHoveredPart(null);
     };
 
     const handleBodyPartClick = (part) => {
-        alert(`You clicked on the ${part}`); // Action when a part is clicked
+        const routes = {
+            "Head": "/face",
+            "Chest": "/chest",
+            "Stomach": "/stomach",
+            "Left Arm": "/left-arm",
+            "Right Arm": "/right-arm",
+            "Left Hand": "/left-hand",
+            "Right Hand": "/right-hand",
+            "Left Leg": "/left-leg",
+            "Right Leg": "/right-leg"
+        };
+
+        navigate(routes[part]); // Navigate to the corresponding page
     };
 
     return (
         <div className="body-page">
             <h1>Select a Body Part</h1>
 
-            {/* Text for highlighted part */}
             {hoveredPart && (
                 <div
                     className="hover-blurb"
@@ -36,69 +49,29 @@ const BodyPage = () => {
                 </div>
             )}
 
-            {/* Image */}
             <div className="body-image-container">
-                <img
-                    src="body.jpg"
-                    alt="Human Body"
-                    className="body-image"
-                />
+                <img src="body.jpg" alt="Human Body" className="body-image" />
 
                 {/* Clickable Areas */}
-                <div
-                    className="clickable head"
-                    onClick={() => handleBodyPartClick("Head")}
-                    onMouseEnter={(e) => handleMouseEnter("Head", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
-                <div
-                    className="clickable chest"
-                    onClick={() => handleBodyPartClick("Chest")}
-                    onMouseEnter={(e) => handleMouseEnter("Chest", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
-                <div
-                    className="clickable stomach"
-                    onClick={() => handleBodyPartClick("Stomach")}
-                    onMouseEnter={(e) => handleMouseEnter("Stomach", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
-                <div
-                    className="clickable left-arm"
-                    onClick={() => handleBodyPartClick("Left Arm")}
-                    onMouseEnter={(e) => handleMouseEnter("Left Arm", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
-                <div
-                    className="clickable right-arm"
-                    onClick={() => handleBodyPartClick("Right Arm")}
-                    onMouseEnter={(e) => handleMouseEnter("Right Arm", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
-                <div
-                    className="clickable left-hand"
-                    onClick={() => handleBodyPartClick("Left Hand")}
-                    onMouseEnter={(e) => handleMouseEnter("Left Hand", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
-                <div
-                    className="clickable right-hand"
-                    onClick={() => handleBodyPartClick("Right Hand")}
-                    onMouseEnter={(e) => handleMouseEnter("Right Hand", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
-                <div
-                    className="clickable left-leg"
-                    onClick={() => handleBodyPartClick("Left Leg")}
-                    onMouseEnter={(e) => handleMouseEnter("Left Leg", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
-                <div
-                    className="clickable right-leg"
-                    onClick={() => handleBodyPartClick("Right Leg")}
-                    onMouseEnter={(e) => handleMouseEnter("Right Leg", e)}
-                    onMouseLeave={handleMouseLeave}
-                ></div>
+                {Object.keys({
+                    "Head": "/face",
+                    "Chest": "/chest",
+                    "Stomach": "/stomach",
+                    "Left Arm": "/left-arm",
+                    "Right Arm": "/right-arm",
+                    "Left Hand": "/left-hand",
+                    "Right Hand": "/right-hand",
+                    "Left Leg": "/left-leg",
+                    "Right Leg": "/right-leg"
+                }).map((part) => (
+                    <div
+                        key={part}
+                        className={`clickable ${part.toLowerCase().replace(" ", "-")}`}
+                        onClick={() => handleBodyPartClick(part)}
+                        onMouseEnter={(e) => handleMouseEnter(part, e)}
+                        onMouseLeave={handleMouseLeave}
+                    ></div>
+                ))}
             </div>
         </div>
     );
