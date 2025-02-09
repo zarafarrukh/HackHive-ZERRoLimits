@@ -19,13 +19,85 @@
     display: block;
     margin: 0 auto;
     /* Center the image */
+    transition: transform 1s ease-in-out;
+    /* Smooth zoom-in effect */
+    transform-origin: center center;
+    /* Set default transform origin */
 }
 
+/* Add the zoom-in effect for the head */
+.body-image.zoom-in-head {
+    transform: scale(2);
+    /* Zoom in by 2x */
+    transform-origin: 44% 5%;
+    /* Zoom towards the head */
+}
+
+/* Add the zoom-in effect for the chest */
+.body-image.zoom-in-chest {
+    transform: scale(2);
+    /* Zoom in by 2x */
+    transform-origin: 42% 20%;
+    /* Zoom towards the chest */
+}
+
+/* Add the zoom-in effect for the stomach */
+.body-image.zoom-in-stomach {
+    transform: scale(2);
+    transform-origin: 41% 35%;
+    /* Zoom towards the stomach */
+}
+
+/* Add the zoom-in effect for the left arm */
+.body-image.zoom-in-left-arm {
+    transform: scale(2);
+    transform-origin: 25% 22%;
+    /* Zoom towards the left arm */
+}
+
+/* Add the zoom-in effect for the right arm */
+.body-image.zoom-in-right-arm {
+    transform: scale(2);
+    /* Zoom in by 2x */
+    transform-origin: 66% 22%;
+    /* Zoom towards the right arm */
+}
+
+/* Add the zoom-in effect for the left hand */
+.body-image.zoom-in-left-hand {
+    transform: scale(2);
+    /* Zoom in by 2x */
+    transform-origin: 20% 45%;
+    /* Zoom towards the left hand */
+}
+
+/* Add the zoom-in effect for the right hand */
+.body-image.zoom-in-right-hand {
+    transform: scale(2);
+    /* Zoom in by 2x */
+    transform-origin: 70% 45%;
+    /* Zoom towards the right hand */
+}
+
+/* Add the zoom-in effect for the left leg */
+.body-image.zoom-in-left-leg {
+    transform: scale(2);
+    /* Zoom in by 2x */
+    transform-origin: 40% 55%;
+    /* Zoom towards the left leg */
+}
+
+/* Add the zoom-in effect for the right leg */
+.body-image.zoom-in-right-leg {
+    transform: scale(2);
+    /* Zoom in by 2x */
+    transform-origin: 50% 55%;
+    /* Zoom towards the right leg */
+}
 /* Blurb for Hovered Body Part */
 .hover-blurb {
     position: absolute;
     transform: translate(-50%, -120%);
-    /* Position above hovered area */
     background-color: rgba(0, 128, 0, 0.8);
     /* Green background */
     color: white;
@@ -96,13 +168,9 @@
 /* Left Hand */
 .left-hand {
     top: 45%;
-    /* Adjusted vertical position */
     left: 20%;
-    /* Adjusted horizontal position */
     width: 60px;
-    /* Increased width */
     height: 60px;
-    /* Increased height */
     border-radius: 50%;
     /* Circular area */
 }
@@ -110,13 +178,9 @@
 /* Right Hand */
 .right-hand {
     top: 45%;
-    /* Adjusted vertical position */
     left: 70%;
-    /* Adjusted horizontal position */
     width: 60px;
-    /* Increased width */
     height: 60px;
-    /* Increased height */
     border-radius: 50%;
     /* Circular area */
 }
