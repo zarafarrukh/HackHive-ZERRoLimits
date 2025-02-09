@@ -10,6 +10,10 @@ const StomachPage = () => {
         navigate(-1); // Go back to the previous page
     };
 
+    const handleSkinClick = () => {
+        navigate("/skin-questions");
+    };
+
     return (
         <div className="stomach-container">
             {/* Stomach Image */}
@@ -17,7 +21,7 @@ const StomachPage = () => {
 
             {/* Centered Skin Button */}
             <div className="stomach-buttons">
-                <button className="stomach-option-button">Skin</button>
+                <button className="stomach-option-button" onClick={handleSkinClick}>Skin</button>
             </div>
 
             {/* Back Button with Text */}

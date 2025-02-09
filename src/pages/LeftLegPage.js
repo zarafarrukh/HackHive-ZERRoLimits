@@ -10,6 +10,10 @@ const LeftLegPage = () => {
         navigate(-1); // Go back to the previous page
     };
 
+    const handleSkinClick = () => {
+        navigate("/skin-questions");
+    };
+
     return (
         <div className="left-leg-container">
             {/* Left Leg Image */}
@@ -17,7 +21,7 @@ const LeftLegPage = () => {
 
             {/* Centered Skin Button */}
             <div className="left-leg-buttons">
-                <button className="left-leg-option-button">Skin</button>
+                <button className="left-leg-option-button" onClick={handleSkinClick}>Skin</button>
             </div>
 
             {/* Back Button with Text */}
