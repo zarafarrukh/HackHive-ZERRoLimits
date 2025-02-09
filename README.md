@@ -1,5 +1,5 @@
 # REVIVO
-![REVIVO](src/assets/images)
+![REVIVO]([src/assets/images](https://github.com/zarafarrukh/Revivo/blob/main/src/assets/images/logo.png))
 
 ## Contributors
 Zara Farrukh - Rabia Chattha - Ethan Janovitz - Rithika Rushendra
