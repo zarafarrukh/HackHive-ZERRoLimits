@@ -10,6 +10,10 @@ const FacePage = () => {
         navigate(-1); // Go back to the previous page
     };
 
+    const handleHairClick = () => {
+        navigate("/hair-questions"); // Navigate to the Hair Questions page
+    };
+
     return (
         <div className="face-container">
             {/* Face Image Only */}
@@ -18,7 +22,8 @@ const FacePage = () => {
             {/* Two Buttons in Center */}
             <div className="face-buttons">
                 <button className="face-option-button">Skin</button>
-                <button className="face-option-button">Hair</button>
+                <button className="face-option-button" onClick={handleHairClick}>
+                    Hair</button>
             </div>
 
             {/* Back Button with Text */}
