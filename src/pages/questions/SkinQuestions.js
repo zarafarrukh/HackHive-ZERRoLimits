@@ -40,7 +40,8 @@ const SkinQuestions = () => {
         Severity of my acne is: ${answers.acneSeverity}. 
         My skincare goals are: ${answers.skinGoals}. 
         Please provide me with personalized recommendations based on this information. 
-        Keep the response short but informational, and present it in bullet points.`;
+        Keep the response short but informational, and present it in bullet points.
+        Can you also make a 7 day routine.`;
   };
 
   // Send prompt to OpenAI

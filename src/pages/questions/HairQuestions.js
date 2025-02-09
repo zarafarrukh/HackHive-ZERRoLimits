@@ -40,7 +40,8 @@ const HairQuestions = () => {
             My hair goals are: ${answers.goals}. 
             My favorite type of hair product is: ${answers.favoriteProduct}. 
             Please provide me with personalized recommendations based on this information.
-            keep the response short but informational, as well as make sure it's in bullet point form.`;
+            keep the response short but informational, as well as make sure it's in bullet point form.
+            Can you also make a 7 day routine.`;
   };
 
   // Send prompt to OpenAI
