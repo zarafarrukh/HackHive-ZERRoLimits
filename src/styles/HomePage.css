@@ -12,6 +12,23 @@
     margin: 0;
   }
   
+  /* Root Cause Text */
+.root-cause {
+  font-family: "Triodion", serif;
+  font-size: 20px;
+  font-weight: 600; 
+  text-align: center;
+  color: #224724;
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+/* Dark Mode */
+.dark-mode .root-cause {
+  color: #d1d1d1; /* Lighter green in dark mode */
+}
+
+
   /* Header with logo and slogan */
   .homepage-header {
     margin-bottom: 20px;

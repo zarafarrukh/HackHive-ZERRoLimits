@@ -22,7 +22,7 @@ const HomePage = () => {
 
       {/* Main Section */}
       <section className="main-content">
-        <p>Find the root cause of your health concerns and get personalized insights.</p>
+        <p className="root-cause">Find the root cause of your health concerns and get personalized insights.</p>
         <Link to="/body" className="cta-button">Start Your Journey</Link>
       </section>
 
