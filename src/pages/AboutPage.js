@@ -4,6 +4,7 @@ import "../styles/AboutPage.css"; // Import CSS
 import Footer from "../pages/Footer"; // Import Footer
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import Accessibility from "../pages/Accessibility";
 
 const teamMembers = [
   {
@@ -59,6 +60,9 @@ const AboutPage = () => {
           <FontAwesomeIcon icon={faHome} /> Home
         </Link>
       </div>
+
+      {/* Accessibility Feature */}
+      <Accessibility />
 
       {/* Footer */}
       <Footer />

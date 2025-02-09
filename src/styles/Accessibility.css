@@ -1,0 +1,92 @@
+/* Accessibility CSS */
+.accessibility-container { 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.accessibility-icon {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.accessibility-icon:hover {
+    background-color: #388e3c;
+}
+
+.accessibility-bar {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #388e3c;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.accessibility-bar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.accessibility-bar p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark background for dark mode */
+    color: white; /* White text color */
+}
+
+.dark-mode a {
+    color: #b3b3b3; /* Light gray for links in dark mode */
+}
+
+.dark-mode .accessibility-bar {
+    background-color: #333; /* Dark bar */
+    color: white;
+}
+
+.dark-mode .button {
+    background-color: #555; /* Dark buttons */
+    color: white;
+}
+
+/* Highlight Links */
+.highlight-links a {
+  background-color: yellow;
+  color: black !important;
+  padding: 2px 5px;
+  border-radius: 3px;
+}

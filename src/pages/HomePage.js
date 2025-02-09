@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/HomePage.css";
 import Footer from "../pages/Footer";
 import Logo from "../assets/images/logo.png";
+import Accessibility from "../pages/Accessibility";
 
 const HomePage = () => {
   return (
@@ -24,6 +25,9 @@ const HomePage = () => {
         <p>Find the root cause of your health concerns and get personalized insights.</p>
         <Link to="/body" className="cta-button">Start Your Journey</Link>
       </section>
+
+       {/* Accessibility Feature */}
+       <Accessibility />
 
       {/* Footer */}
       <Footer />
