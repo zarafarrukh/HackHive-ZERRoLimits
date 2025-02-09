@@ -17,5 +17,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to run 
 
+Create an account for Open AI. Create a ```.env``` file and upload the following API key:
+
+- ChatGPT API
+
+## Run the following commands:
+
+```npm i```
+```npm run start```
 
 
