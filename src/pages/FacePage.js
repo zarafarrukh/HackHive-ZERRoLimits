@@ -12,14 +12,12 @@ const FacePage = () => {
 
     return (
         <div className="face-container">
-            <h1>Face Page</h1>
-            <p>Information about the face.</p>
+            {/* Face Image Only */}
+            <img src="/head.png" alt="Head" className="face-image" />
 
-            {/* Using image from /public folder */}
-            <img src="/head.png" alt="Head" />
-
+            {/* Back Button with Text */}
             <button className="back-button" onClick={handleBackClick}>
-                Back to Body Selection
+                Back
             </button>
         </div>
     );
