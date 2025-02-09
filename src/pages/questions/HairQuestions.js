@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../../styles/HairQuestions.css";
 
 const HairQuestions = () => {
+    const navigate = useNavigate(); // Initialize navigate hook
     const [answers, setAnswers] = useState({
       hairLength: "",
       hairType: "",
@@ -133,7 +135,15 @@ const HairQuestions = () => {
             ))}
           </div>
         </div>
-  
+        
+        {/* Back Button */}
+        <button
+          className="back-to-body-btn"
+          onClick={() => navigate("/body")} // Navigate back to BodyPage
+        >
+          Back to Body Diagram
+        </button>
+
         {/* Submit Button */}
         <button 
           className="bg-blue-500 text-white px-4 py-2 rounded mt-4"

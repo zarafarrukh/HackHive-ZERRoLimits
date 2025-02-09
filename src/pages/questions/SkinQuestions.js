@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "../../styles/SkinQuestions.css";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const SkinQuestions = () => {
+    const navigate = useNavigate(); // Initialize navigate hook
     const [answers, setAnswers] = useState({
         skinType: "",
         skinConcerns: [],
@@ -164,6 +166,13 @@ const SkinQuestions = () => {
         Get Skincare Advice
       </button>
 
+      {/* Back Button */}
+      <button
+          className="back-to-body-btn"
+          onClick={() => navigate("/body")} // Navigate back to BodyPage
+      >
+          Back to Body Diagram
+      </button>
       {/* Response Display */}
       {response && (
         <div className="mt-4">
