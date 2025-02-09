@@ -15,6 +15,7 @@ import RightHandPage from "./pages/RightHandPage";
 import LeftLegPage from "./pages/LeftLegPage";
 import RightLegPage from "./pages/RightLegPage";
 import HairQuestions from "./pages/questions/HairQuestions";
+import SkinQuestions from "./pages/questions/SkinQuestions";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         {/* Fallback route */}
         <Route path="*" element={<BodyPage />} />
         <Route path="/hair-questions" element={<HairQuestions />} />
+        <Route path="/skin-questions" element={<SkinQuestions />} />
 
       </Routes>
     </Router>

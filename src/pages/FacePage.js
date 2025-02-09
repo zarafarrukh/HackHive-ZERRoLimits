@@ -14,6 +14,10 @@ const FacePage = () => {
         navigate("/hair-questions"); // Navigate to the Hair Questions page
     };
 
+    const handleSkinClick = () => {
+        navigate("/skin-questions");
+    };
+
     return (
         <div className="face-container">
             {/* Face Image Only */}
@@ -21,7 +25,8 @@ const FacePage = () => {
 
             {/* Two Buttons in Center */}
             <div className="face-buttons">
-                <button className="face-option-button">Skin</button>
+                <button className="face-option-button" onClick={handleSkinClick}>
+                    Skin</button>
                 <button className="face-option-button" onClick={handleHairClick}>
                     Hair</button>
             </div>
