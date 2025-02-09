@@ -121,7 +121,7 @@ const BodyPage = () => {
 
             <div className="body-image-container">
                 <img
-                    src="body.jpg"
+                    src="bodyColored.png"
                     alt="Human Body"
                     className={`body-image ${isHeadZooming ? "zoom-in-head" : ""}
                 ${isChestZooming ? "zoom-in-chest" : ""}
