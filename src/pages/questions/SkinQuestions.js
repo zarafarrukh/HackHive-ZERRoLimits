@@ -1,24 +1,23 @@
 import { useState } from "react";
 import "../../styles/SkinQuestions.css";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const SkinQuestions = () => {
-    const navigate = useNavigate(); // Initialize navigate hook
-    const [answers, setAnswers] = useState({
-        skinType: "",
-        skinConcerns: [],
-        skinGoals: "",
-        acneSeverity: "",
-      });
-  
-    const [response, setResponse] = useState("");
-    
-    const apiKey = process.env.REACT_APP_api_key;
-    const modelUrl = process.env.REACT_APP_url;
+  const navigate = useNavigate(); // Initialize navigate hook
+  const [answers, setAnswers] = useState({
+    skinType: "",
+    skinConcerns: [],
+    skinGoals: "",
+    acneSeverity: "",
+  });
 
-    console.log("API Key:", apiKey); // Should display the API key
-    console.log("Model URL:", modelUrl); // Should display the API endpoint
-    // Function to handle button selections
+  const [response, setResponse] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // New state for error messages
+
+  const apiKey = process.env.REACT_APP_api_key;
+  const modelUrl = process.env.REACT_APP_url;
+
+  // Function to handle button selections
   const handleSelect = (question, value) => {
     if (question === "skinConcerns") {
       // Allow multiple concerns to be selected
@@ -36,16 +35,28 @@ const SkinQuestions = () => {
   // Generate structured prompt
   const generatePrompt = () => {
     return `I am looking for skincare advice. 
-    My skin type is: ${answers.skinType}. 
-    My main skin concerns are: ${answers.skinConcerns.join(", ")}. 
-    Severity of my acne is: ${answers.acneSeverity}. 
-    My skincare goals are: ${answers.skinGoals}. 
-    Please provide me with personalized recommendations based on this information. 
-    Keep the response short but informational, and present it in bullet points.`;
+        My skin type is: ${answers.skinType}. 
+        My main skin concerns are: ${answers.skinConcerns.join(", ")}. 
+        Severity of my acne is: ${answers.acneSeverity}. 
+        My skincare goals are: ${answers.skinGoals}. 
+        Please provide me with personalized recommendations based on this information. 
+        Keep the response short but informational, and present it in bullet points.`;
   };
 
   // Send prompt to OpenAI
   const handleGenerate = async () => {
+    // Check if all required fields are filled
+    if (
+      !answers.skinType ||
+      !answers.skinConcerns.length ||
+      !answers.acneSeverity ||
+      !answers.skinGoals
+    ) {
+      setErrorMessage("Please answer all the questions before submitting.");
+      setResponse(""); // Clear any previous response
+      return;
+    }
+
     const prompt = generatePrompt();
 
     try {
@@ -79,6 +90,11 @@ const SkinQuestions = () => {
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Skincare Questions</h1>
 
+      {/* Error message */}
+      {errorMessage && (
+        <div className="text-red-500 mb-4">{errorMessage}</div>
+      )}
+
       {/* Skin Type */}
       <div className="mb-4">
         <label className="block font-bold mb-2">What is your skin type?</label>
@@ -86,9 +102,7 @@ const SkinQuestions = () => {
           {["Dry", "Oily", "Combination", "Sensitive", "Normal"].map((type) => (
             <button
               key={type}
-              className={`p-2 border rounded ${
-                answers.skinType === type ? "selected" : ""
-              }`}
+              className={`p-2 border rounded ${answers.skinType === type ? "selected" : ""}`}
               onClick={() => handleSelect("skinType", type)}
             >
               {type}
@@ -114,9 +128,7 @@ const SkinQuestions = () => {
           ].map((concern) => (
             <button
               key={concern}
-              className={`p-2 border rounded ${
-                answers.skinConcerns.includes(concern) ? "selected" : ""
-              }`}
+              className={`p-2 border rounded ${answers.skinConcerns.includes(concern) ? "selected" : ""}`}
               onClick={() => handleSelect("skinConcerns", concern)}
             >
               {concern}
@@ -125,17 +137,18 @@ const SkinQuestions = () => {
         </div>
       </div>
 
+      {/* Acne Severity */}
       <div className="mb-4">
         <label className="block font-bold mb-2">What is the severity of your acne?</label>
         <div className="flex gap-2">
           {["Mild", "Moderate", "Severe"].map((severity) => (
             <button
-            key={severity}
-            className={`p-2 border rounded ${answers.acneSeverity === severity ? "selected" : ""}`}
-            onClick={() => handleSelect("acneSeverity", severity)}
-          >
-            {severity}
-          </button>
+              key={severity}
+              className={`p-2 border rounded ${answers.acneSeverity === severity ? "selected" : ""}`}
+              onClick={() => handleSelect("acneSeverity", severity)}
+            >
+              {severity}
+            </button>
           ))}
         </div>
       </div>
@@ -147,9 +160,7 @@ const SkinQuestions = () => {
           {["Clear Skin", "Hydration", "Reduce Redness", "Anti-Aging"].map((goal) => (
             <button
               key={goal}
-              className={`p-2 border rounded ${
-                answers.skinGoals === goal ? "selected" : ""
-              }`}
+              className={`p-2 border rounded ${answers.skinGoals === goal ? "selected" : ""}`}
               onClick={() => handleSelect("skinGoals", goal)}
             >
               {goal}
@@ -168,11 +179,12 @@ const SkinQuestions = () => {
 
       {/* Back Button */}
       <button
-          className="back-to-body-btn"
-          onClick={() => navigate("/body")} // Navigate back to BodyPage
+        className="back-to-body-btn"
+        onClick={() => navigate("/body")} // Navigate back to BodyPage
       >
-          Back to Body Diagram
+        Back to Body Diagram
       </button>
+
       {/* Response Display */}
       {response && (
         <div className="mt-4">
