@@ -1,0 +1,60 @@
+.about-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #e4fae6;
+  }
+  
+  .about-header {
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    margin-top: 20px;
+  }
+  
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .github-link {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .github-link:hover {
+    text-decoration: underline;
+  }
+  
+  .go-home {
+    margin-top: 30px;
+  }
+  
+  .go-home-link {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .go-home-link:hover {
+    background-color: #388e3c;
+  }
+  
+  .go-home-link .fa-home {
+    margin-right: 8px;
+  }

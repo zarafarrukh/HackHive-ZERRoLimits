@@ -8,9 +8,9 @@ const Footer = () => {
     <footer className="homepage-footer">
       <p>© 2025 Revivo. All Rights Reserved.</p>
       <p>
-        <a href="https://devpost.com" target="_blank" rel="noopener noreferrer">DevPost</a> | 
-        <a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a> | 
-        <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://hackhive-otu.devpost.com">DevPost</a> | 
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer"> Discord</a> |
+        <a href="https://github.com/zarafarrukh/Revivo"> GitHub</a>
       </p>
     </footer>
   );

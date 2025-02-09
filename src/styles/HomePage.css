@@ -1,78 +1,140 @@
 /* Styles for homepage */
 .homepage {
-  text-align: center;
-  background-color: #e2fde4;
-  /* Sage green */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
-
-/* Header with logo and slogan */
-.homepage-header {
-  margin-bottom: 20px;
-}
-
-.logo {
-  width: 120px;
-}
-
-.slogan {
-  font-style: italic;
-  color: #388e3c;
-}
-
-/* Main content section */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Styles for the "Start Your Journey" button */
-.cta-button {
-  background-color: #4CAF50;
-  /* Green background */
-  color: white;
-  /* White text */
-  font-size: 18px;
-  /* Font size */
-  font-weight: bold;
-  /* Bold text */
-  padding: 15px 30px;
-  /* Padding for a button-like feel */
-  border: none;
-  /* Remove default borders */
-  border-radius: 50px;
-  /* Rounded corners for bubble look */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow for depth */
-  cursor: pointer;
-  /* Pointer cursor on hover */
-  transition: transform 0.3s, box-shadow 0.3s;
-  /* Smooth hover and click effects */
-  margin-top: 20px;
-  /* Add spacing from other elements */
-}
-
-/* Hover effect for the button */
-.cta-button:hover {
-  transform: scale(1.1);
-  /* Slightly enlarge the button on hover */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-  /* Enhanced shadow on hover */
-}
-
-/* Active/click effect for the button */
-.cta-button:active {
-  transform: scale(0.95);
-  /* Slightly shrink the button on click */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  /* Softer shadow on click */
-}
+    text-align: center;
+    background-color: #e2fde4;
+    /* Sage green */
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  /* Header with logo and slogan */
+  .homepage-header {
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+  
+  .slogan {
+    font-style: italic;
+    color: #388e3c;
+  }
+  
+  /* Main content section */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Styles for the "Start Your Journey" button */
+  .cta-button {
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    /* White text */
+    font-size: 18px;
+    /* Font size */
+    font-weight: bold;
+    /* Bold text */
+    padding: 15px 30px;
+    /* Padding for a button-like feel */
+    border: none;
+    /* Remove default borders */
+    border-radius: 50px;
+    /* Rounded corners for bubble look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth hover and click effects */
+    margin-top: 20px;
+    /* Add spacing from other elements */
+  }
+  
+  /* Hover effect for the button */
+  .cta-button:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow on hover */
+  }
+  
+  /* Active/click effect for the button */
+  .cta-button:active {
+    transform: scale(0.95);
+    /* Slightly shrink the button on click */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    /* Softer shadow on click */
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #224724; /* Dark green */
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Navbar Links */
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Adjust Logo */
+  .logo {
+    width: 180px; /* Scalable size */
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* Call-to-Action Button */
+  .cta-button {
+    display: inline-block;
+    background: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: #388e3c;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
