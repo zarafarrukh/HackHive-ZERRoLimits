@@ -3,8 +3,18 @@
     margin-top: 20px;
     font-family: Arial, sans-serif;
     position: relative;
+    background-image: ('/background.png');
+    /* Correct path from public folder */
+    background-size: cover;
+    /* Ensures the image covers the whole background */
+    background-position: center;
+    /* Centers the background image */
+    height: 100vh;
+    /* Ensure the page takes up the full height */
+    background-color: transparent;
 }
 
+/* Rest of the CSS remains the same */
 .body-image-container {
     position: relative;
     display: inline-block;
@@ -12,7 +22,7 @@
 }
 
 .body-image {
-    width: 400px;
+    width: 340px;
     /* Adjust width */
     height: auto;
     /* Maintain aspect ratio */
@@ -94,34 +104,30 @@
     transform-origin: 50% 55%;
     /* Zoom towards the right leg */
 }
+
 /* Blurb for Hovered Body Part */
 .hover-blurb {
     position: absolute;
     transform: translate(-50%, -120%);
     background-color: rgba(0, 128, 0, 0.8);
-    /* Green background */
     color: white;
     padding: 5px 10px;
     border-radius: 10px;
-    /* Rounded bubble appearance */
     font-size: 14px;
     z-index: 10;
     pointer-events: none;
-    /* Prevent interaction */
 }
 
 /* Clickable Areas */
 .clickable {
     position: absolute;
     background: transparent;
-    /* Transparent by default */
     cursor: pointer;
     transition: background 0.2s ease;
 }
 
 .clickable:hover {
     background: rgba(255, 0, 0, 0.3);
-    /* Red overlay when hovered */
 }
 
 /* Head */
@@ -172,7 +178,6 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    /* Circular area */
 }
 
 /* Right Hand */
@@ -182,7 +187,6 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    /* Circular area */
 }
 
 /* Left Leg */
@@ -205,13 +209,9 @@
 .back-button {
     position: absolute;
     bottom: 20px;
-    /* Place the button near the bottom */
     left: 20px;
-    /* Place the button near the left */
     padding: 6px 12px;
-    /* Smaller button size */
     font-size: 12px;
-    /* Smaller font size */
     color: white;
     background-color: #007bff;
     border: none;

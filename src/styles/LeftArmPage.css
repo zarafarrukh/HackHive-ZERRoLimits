@@ -5,7 +5,7 @@
     justify-content: flex-start;
     /* Moves content higher */
     min-height: 100vh;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, white, #7ff6ff);
     padding-top: 40px;
     /* Moves the image higher */
     position: relative;

@@ -3,7 +3,7 @@
 /* Set a clean font for the whole page */
 body {
   font-family: "Arial", sans-serif; /* Change this to any font you like */
-  background-color: #76e3a0;
+  background: linear-gradient(to bottom, white, #7ff6ff);
   color: #000000;
 }
 
