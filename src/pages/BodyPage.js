@@ -36,6 +36,10 @@ const BodyPage = () => {
         navigate(routes[part]); // Navigate to the corresponding page
     };
 
+    const handleBackClick = () => {
+        navigate("/"); // Navigate to the home page
+    };
+
     return (
         <div className="body-page">
             <h1>Select a Body Part</h1>
@@ -48,6 +52,11 @@ const BodyPage = () => {
                     {hoveredPart}
                 </div>
             )}
+
+            {/* Back Button */}
+            <button className="back-button" onClick={handleBackClick}>
+                Back to Home
+            </button>
 
             <div className="body-image-container">
                 <img src="body.jpg" alt="Human Body" className="body-image" />

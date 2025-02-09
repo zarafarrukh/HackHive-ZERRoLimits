@@ -136,3 +136,27 @@
     width: 30px;
     height: 140px;
 }
+
+/* Back Button Styling */
+.back-button {
+    position: absolute;
+    bottom: 20px;
+    /* Place the button near the bottom */
+    left: 20px;
+    /* Place the button near the left */
+    padding: 6px 12px;
+    /* Smaller button size */
+    font-size: 12px;
+    /* Smaller font size */
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
